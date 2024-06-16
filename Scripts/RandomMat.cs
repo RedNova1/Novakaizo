@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-namespace LoadoutFix
+namespace Novakaizo
 {
     public class RandomMat : MonoBehaviour
     {
         [SerializeField] Material[] materials;
         Renderer renderer;
 
-        void Start ()
+        void Start()
         {
             renderer = gameObject.GetComponent<Renderer>();
         }
         public void Randomize()
         {
-            renderer.material = materials[UnityEngine.Random.Range(0,materials.Length - 1)];
+            renderer.material = materials[UnityEngine.Random.Range(0, materials.Length - 1)];
         }
     }
 }
